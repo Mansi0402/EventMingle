@@ -178,7 +178,8 @@ section{
 
 .home .slide .content{
     width: 85rem;
-    display: none; 
+    display: none;
+    background: rgba(0,0,0, 0.5);
 }
 
 .home .swiper-slide-active .content{
@@ -476,6 +477,57 @@ section{
     border-radius: 50%;
     margin-top: 1rem;
 }
+
+.events .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 2rem;
+}
+
+.events .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
+
+.events .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+}
+
+.events .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.events .box-container .box .content{
+    padding: 2rem;
+}
+
+.events .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.events .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.events .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.events .load-more{
+    text-align: center;
+    margin-top: 2rem;
+}
+
 
 
 

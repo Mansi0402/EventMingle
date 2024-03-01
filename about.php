@@ -202,7 +202,7 @@
 
         </div>
 
-        <div class="credit">Created by- <span>MAD</span></div>
+        <div class="credit">Created by- <span>MADS</span></div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src = "js/script.js"></script>

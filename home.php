@@ -151,7 +151,7 @@
                     <img src="images/background-slide3.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>C Conference</h3>
+                    <h3>Conference Conference</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia. In harum assumenda vero magnam officiis corporis aperiam accusamus! Aut similique praesentium et, enim rem deserunt quisquam aspernatur adipisci recusandae!</p>
                     <a href="book.php" class="btn">Book Now</a>
                 </div>
@@ -235,7 +235,7 @@
 
         </div>
 
-        <div class="credit">Created by- <span>MAD</span></div>
+        <div class="credit">Created by- <span>MADS</span></div>
     </section>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src = "js/script.js"></script>
