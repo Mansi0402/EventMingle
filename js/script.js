@@ -34,7 +34,7 @@ var swiper = new Swiper(".home-slider",{
 document.addEventListener('DOMContentLoaded', function() {
     const accessibilityBtn = document.getElementById('accessibility-btn');
     const accessibilityIcon = document.querySelector('#accessibility-btn img');
-    const contentElements = document.querySelectorAll('.content p, .content h3, .content h1, .content a , .navbar a, .footer a');
+    const contentElements = document.querySelectorAll('.content p, .content h3, .content h1, .content a , .navbar a, .footer a,.content li');
     
     accessibilityBtn.addEventListener('click', function() {
         accessibilityIcon.classList.toggle('active');
@@ -68,6 +68,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+function validateForm() {
+    var name = document.forms["bookForm"]["name"].value;
+    var phone = document.forms["bookForm"]["phone"].value;
+    var email = document.forms["bookForm"]["email"].value;
+    var date = document.forms["bookForm"]["date"].value;
+    var time = document.forms["bookForm"]["time"].value;
+    var guests = document.forms["bookForm"]["guests"].value;
+
+    if (name == "") {
+        alert("Please enter your name");
+        return false;
+    }
+    if (phone == "") {
+        alert("Please enter your phone number");
+        return false;
+    }
+    if (email == "") {
+        alert("Please enter your email");
+        return false;
+    }
+    if (date == "") {
+        alert("Please select a date");
+        return false;
+    }
+    if (time == "") {
+        alert("Please select a time");
+        return false;
+    }
+    if (guests == "") {
+        alert("Please enter number of guests");
+        return false;
+    }
+}
 
 
       

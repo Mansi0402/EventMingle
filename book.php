@@ -14,23 +14,115 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <button id="accessibility-btn" aria-label="Accessibility Settings">
+        <img src="images/1.png" alt="Accessibility Icon">
+    </button>
     <section class = "header">
-        <a href="home.php" class="logo">Event</a>
+        <img src="images/event.png" alt="">
 
         <nav class="navbar">
             <a href="home.php">home</a>
             <a href="about.php">about</a>
             <a href="event.php">events</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="cuisine.php">Cuisine <i class="fa fa-caret-right"></i></a>
+                        <div class="submenu-content">
+                            <a href="cuisine.php#sindian">South Indian</a>
+                            <a href="cuisine.php#italian">Italian</a>
+                            <a href="cuisine.php#chinease">Chinese</a>
+                            <a href="cuisine.php#indian">North Indian</a>
+                            <a href="cuisine.php#continental">Continental</a>
+                            <a href="cuisine.php#thai">Thai</a>
+                            <a href="cuisine.php#mexican">Mexican</a>
+                            <a href="cuisine.php#american">American</a>
+                            <a href="cuisine.php#french">French</a>
+                            <!-- etc etc -->
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="">Decorations<i class="fa fa-caret-right"></i></a>
+                        <div class="submenu-content">
+                            <a href="">Floral Decorations</a>
+                            <a href="">Kids Decorations</a>
+                            <a href="">White Decorations</a>
+                            <a href="">Concert Decorations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <a href="book.php">book</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
     </section>
 
-   <div class="heading">
+   <div class="heading" style = "background: url(../images/about1.jpg)">
     <h1>Book Now</h1>
    </div>
+
+   <!-- booking section -->
+   <section class="booking">
+    <h1 class="heading-title">Book your Event!</h1>
+    <form action="book_form.php" method="post" class="book-form" name="bookForm" onsubmit="return validateForm()">
+
+        <div class="flex">
+            <div class="inputBox">
+                <span>Name: </span>
+                <input type="text" placeholder= "Enter your name" name = "name">
+            </div>
+            <div class="inputBox">
+                <span>Phone number: </span>
+                <input type="text" placeholder= "Enter your number" name = "phone">
+            </div>
+            <div class="inputBox">
+                <span>Email : </span>
+                <input type="text" placeholder= "Enter your email" name = "email">
+            </div>
+            <div class="inputBox">
+                <span>Type of Event: </span>
+                <select name = "event">
+                    <option value="Birthday">Birthday</option>
+                    <option value="Marriage">Marriage</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Baby Shower">Baby Shower</option>
+                    <option value="Conference">Conference</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>Date: </span>
+                <input type="date" name = "date">
+            </div>
+            <div class="inputBox">
+                <span>Time: </span>
+                <input type="time" name = "time">
+            </div>
+            <div class="inputBox">
+                <span>Number of Guests : </span>
+                <input type="number" placeholder= "Enter number of guests" name = "guests">
+            </div>
+            <div class="inputBox">
+                <span>Cuisine : </span>
+                <select name = "cuisine">
+                    <option value="SouthIndian">South Indian</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Italian">Italian</option>
+                    <option value="NorthIndian">North Indian</option>
+                    <option value="Contiental">Contiental</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="American">American</option>
+                    <option value="French">French</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="submit" class="btn" name = "send">
+    </form>
+   </section>
 
     
 

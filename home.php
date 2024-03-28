@@ -18,14 +18,44 @@
         <img src="images/1.png" alt="Accessibility Icon">
     </button>
     <section class = "header">
-        <a href="home.php" class="logo">Event</a>
+        <img src="images/event.png" alt="">
 
         <nav class="navbar">
             <a href="home.php">home</a>
             <a href="about.php">about</a>
             <a href="event.php">events</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="cuisine.php">Cuisine <i class="fa fa-caret-right"></i></a>
+                        <div class="submenu-content">
+                            <a href="cuisine.php#sindian">South Indian</a>
+                            <a href="cuisine.php#italian">Italian</a>
+                            <a href="cuisine.php#chinease">Chinese</a>
+                            <a href="cuisine.php#indian">North Indian</a>
+                            <a href="cuisine.php#continental">Continental</a>
+                            <a href="cuisine.php#thai">Thai</a>
+                            <a href="cuisine.php#mexican">Mexican</a>
+                            <a href="cuisine.php#american">American</a>
+                            <a href="cuisine.php#french">French</a>
+                            <!-- etc etc -->
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="">Decorations<i class="fa fa-caret-right"></i></a>
+                        <div class="submenu-content">
+                            <a href="">Floral Decorations</a>
+                            <a href="">Kids Decorations</a>
+                            <a href="">White Decorations</a>
+                            <a href="">Concert Decorations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <a href="book.php">book</a>
-            <a href="log-in">LogIn/Sign Up</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -108,7 +138,7 @@
     <!-- home out section  -->
     <section class="home-about">
         <div class="image">
-            <img src="images/about-img.jpg" alt="">
+            <img src="images/aboutimg1.jpeg" height = 500px width=500px alt="">
         </div>
 
         <div class="content">

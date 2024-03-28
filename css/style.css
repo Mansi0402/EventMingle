@@ -70,6 +70,11 @@ html::-webkit-slider-thumb{
     color: var(--black);
 }
 
+.highlight:hover {
+    color: black !important;
+    font-size: 3rem;
+}
+
 .increase{
     font-size: 3rem;
     color: black;
@@ -138,15 +143,87 @@ section{
     justify-content: space-between;
 }
 
-.header .logo{
-    font-size: 2.5rem;
-    color: var(--black);
+.header .navbar{
+    display: flex;
+}
+
+.header img{
+    height: 5rem;
+    width: 35rem;
 }
 
 .header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
     color: var(--black);
+}
+
+.header .navbar .dropdown{
+    overflow: hidden;
+}
+
+.header .navbar .dropdown .dropbtn {
+  display: block;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 2rem;
+  padding-left: 2rem;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.header .navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.header .navbar .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.header .navbar .submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 0;
+    left: 100%;
+}
+
+.header .navbar .dropdown-content a, .header .navbar .submenu-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.header .navbar .dropdown-content a:hover {
+    background-color: #ddd;
+    color: #8e44ad;
+}
+  
+  /* Show the dropdown menu on hover */
+.header .navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header .navbar .submenu:hover .submenu-content {
+    display: block;
 }
 
 .header .navbar a:hover{
@@ -179,7 +256,7 @@ section{
 .home .slide .content{
     width: 85rem;
     display: none;
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.3);
 }
 
 .home .swiper-slide-active .content{
@@ -189,7 +266,7 @@ section{
 .home .slide .content span{
     display: block;
     font-size: 2.2rem;
-    color: var(--light-white);
+    color: var(--white);
     padding-bottom: 1rem;
     animation: fadeIn .4s linear backwards .2s;
 }
@@ -529,11 +606,184 @@ section{
 }
 
 
+/*Cuisine*/
+.cuisine .box-container{
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 5rem;
+}
+
+.cuisine .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    margin-bottom: 3rem;
+    
+}
+
+.cuisine .box-container .box .image{
+    height: 40rem;
+    overflow: hidden;
+}
+
+.cuisine .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.cuisine .box-container .box .content{
+    padding: 2rem;
+}
+
+.cuisine .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.cuisine .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.cuisine .box-container .box .content p{
+    font-size: 1.7rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.cuisine .box-container .box .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the list items */
+.cuisine .box-container .box .content ul li {
+    font-size: 1.5rem;
+    position: relative;
+    display: inline;
+    padding-left: 2.5rem; /* Adjust the spacing of the list items */
+    margin-bottom: 0.5rem; /* Adjust the vertical spacing between list items */
+    color: var(--light-black);
+}
+
+/*Decorations*/
+.deco .box-container{
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 5rem;
+}
+
+.deco .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    margin-bottom: 3rem;
+    
+}
+
+.deco .box-container .box .image{
+    height: 40rem;
+    overflow: hidden;
+}
+
+.deco .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.deco .box-container .box .content{
+    padding: 2rem;
+}
+
+.deco .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.deco .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.deco .box-container .box .content p{
+    font-size: 1.7rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.deco .box-container .box .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the list items */
+.deco .box-container .box .content ul li {
+    font-size: 1.5rem;
+    position: relative;
+    display: inline;
+    padding-left: 2.5rem; /* Adjust the spacing of the list items */
+    margin-bottom: 0.5rem; /* Adjust the vertical spacing between list items */
+    color: var(--light-black);
+}
+
+
+.booking .book-form{
+    padding: 2rem;
+    background: var(--light-bg);
+}
+
+.booking .book-form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.booking .book-form .flex .inputBox{
+    flex: 1 1 41rem;
+}
+
+.booking .book-form .flex .inputBox input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.booking .book-form .flex .inputBox select{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
 
 
 
+.booking .book-form .flex .inputBox input:focus::placeholder{
+    color: var(--light-black);
+}
 
+.booking .book-form .flex .inputBox span{
+    font-size: 1.5rem;
+    color: var(--black);
+}
 
+.booking .book-form .btn{
+    margin-top: 2rem;
+}
 
 
 
@@ -583,7 +833,7 @@ section{
 }
 
 .footer .box-container .box a i{
-    color: var(--main-color);
+    color: var(--light-white);
     padding-right: .5rem;
     transition: .2s linear;
 }
@@ -651,11 +901,28 @@ section{
         top: 99%;
         left: 0;
         right: 0;
+        display: inline;
         background-color: var(--white);
         border-top: var(--border);
         padding: 2rem;
         transition: .2s linear;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar .dropdown{
+        text-align: center;
+        vertical-align: middle;
+        padding-left: 22rem;
+    }
+
+    .header .navbar .dropdown:hover .dropdown-content{
+        display: block;
+        z-index: inherit;
+    }
+
+    .header img{
+        height: 5rem;
+        width: 30rem;
     }
 
     .header .navbar.active{
