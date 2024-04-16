@@ -34,7 +34,7 @@ var swiper = new Swiper(".home-slider",{
 document.addEventListener('DOMContentLoaded', function() {
     const accessibilityBtn = document.getElementById('accessibility-btn');
     const accessibilityIcon = document.querySelector('#accessibility-btn img');
-    const contentElements = document.querySelectorAll('.content p, .content h3, .content h1, .content a , .navbar a, .footer a,.content li');
+    const contentElements = document.querySelectorAll('.content p, .content h3, .content h1, .content a , .navbar a, .footer a,.content li, .about span, .about p , .booking span , .booking input');
     
     accessibilityBtn.addEventListener('click', function() {
         accessibilityIcon.classList.toggle('active');
@@ -103,4 +103,139 @@ function validateForm() {
 }
 
 
-      
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const timeButtons = document.querySelectorAll('.time-btn');
+//     const selectedTimeInput = document.getElementById('selected-time');
+
+//     timeButtons.forEach(button => {
+//         button.addEventListener('click', function () {
+//             // Remove the 'selected' class from all buttons
+//             timeButtons.forEach(btn => btn.classList.remove('selected'));
+
+//             // Add the 'selected' class to the clicked button
+//             this.classList.add('selected');
+
+//             // Set the value of the hidden input field to the selected time
+//             const selectedTime = this.value;
+//             selectedTimeInput.value = selectedTime;
+//         });
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const timeButtons = document.querySelectorAll('.time-btn');
+    const selectedTimeInput = document.getElementById('selected-time');
+    const dateInput = document.getElementsByName('date')[0];
+
+    dateInput.addEventListener('change', function () {
+        const selectedDate = this.value;
+        fetchBookedTimeSlots(selectedDate);
+    });
+
+    function fetchBookedTimeSlots(selectedDate) {
+        fetch('fetch_booked_time_slots.php', {
+            method: 'POST',
+            body: JSON.stringify({ date: selectedDate }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Booked Time Slots:', data.bookedTimeSlots);
+
+            const bookedTimeSlots = data.bookedTimeSlots;
+
+            // Disable booked time slots
+            timeButtons.forEach(button => {
+                const buttonValue = button.value;
+                console.log('Button Value:', buttonValue);
+
+                if (bookedTimeSlots.includes(buttonValue)) {
+                    console.log('Disabling button:', buttonValue);
+                    button.disabled = true;
+                } else {
+                    console.log('Enabling button:', buttonValue);
+                    button.disabled = false;
+                }
+            });
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    timeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            timeButtons.forEach(btn => btn.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedTimeInput.value = this.value;
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const bookForm = document.getElementById('book-form');
+
+    bookForm.addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        window.alert('Your entry has been saved!');
+        
+        // bookForm.reset();
+    });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const selectWarning = document.getElementById('select-warning');
+    const copyWarning = document.getElementById('copy-warning');
+    const dragWarning = document.getElementById('drop-warning');
+
+    function showSelectWarning() {
+        selectWarning.style.display = 'block';
+        setTimeout(function () {
+            selectWarning.style.display = 'none';
+        }, 3000);
+    }
+
+    function showDragWarning() {
+        dragWarning.style.display = 'block';
+        setTimeout(function () {
+            dragWarning.style.display = 'none';
+        }, 3000);
+    }
+
+    function showCopyWarning() {
+        copyWarning.style.display = 'block';
+        setTimeout(function () {
+            copyWarning.style.display = 'none';
+        }, 2000); 
+    }
+
+    document.addEventListener('mousedown', function (event) {
+        if (event.button === 2) { 
+            document.addEventListener('contextmenu', showSelectWarningOnce);
+        }
+    });
+
+    function showSelectWarningOnce(event) {
+        showSelectWarning();
+        event.preventDefault();
+        document.removeEventListener('contextmenu', showSelectWarningOnce);
+    }
+
+    document.addEventListener('copy', function (event) {
+        event.preventDefault(); 
+        showCopyWarning();
+    });
+
+    document.addEventListener('dragover', ev=>{
+        ev.dataTransfer.dropEffect = "none";
+        showDragWarning();
+        ev.preventDefault();
+    });
+});
+

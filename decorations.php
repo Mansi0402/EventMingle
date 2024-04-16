@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="warning-message" id="select-warning">
+        Please refrain from selecting content.
+    </div>
+    <div class="warning-message" id="copy-warning">
+        Copying content is not allowed.
+    </div>
     <button id="accessibility-btn" aria-label="Accessibility Settings">
         <img src="images/1.png" alt="Accessibility Icon">
     </button>
@@ -45,12 +51,13 @@
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="">Decorations<i class="fa fa-caret-right"></i></a>
+                        <a href="decorations.php">Decorations<i class="fa fa-caret-right"></i></a>
                         <div class="submenu-content">
-                            <a href="decorations.php">Floral Decorations</a>
-                            <a href="">Kids Decorations</a>
-                            <a href="">White Decorations</a>
-                            <a href="">Concert Decorations</a>
+                            <a href="decorations.php#floral">Floral Decorations</a>
+                            <a href="decorations.php#concert">Concert Decorations</a>
+                            <a href="decorations.php#kids">Kids Decorations</a>
+                            <a href="decorations.php#white">White Decorations</a>
+                            <a href="decorations.php#formal">Formal Decorations</a>
                         </div>
                     </div>
                 </div>
@@ -77,169 +84,80 @@
             <div class="content">
                 <h3>Floral Decorations</h3>
                 <p>Floral decorations add a touch of elegance, beauty, and charm to any event or space. Whether you're planning a wedding, a birthday party, or a corporate event, incorporating flowers into your decor can transform the ambiance and create a memorable experience for your guests.</p>
-                <p>Some quintessential South Indian dishes include:</p>
+                <p>Some events that can include this type of decoration:</p>
                 <ul>
-                    <li>Kuzhi Paniyaram</li>
-                    <li>Kothu Parotta</li>
-                    <li>Rasam</li>
-                    <li>Biryani</li>
-                    <li>Adai Dosa</li>
+                    <li>Weddings</li>
+                    <li>Anniversary</li>
+                    <li>Birthdays</li>
+                    <li>Baby Shower</li>
                 </ul>
                 <a href="book.php" class="btn">Book Now</a>
             </div>
         </div>
-        <div class="box" id="italian">
+        <div class="box" id="concert">
             <div class="image">
                 <img src="images/concert.jpg" alt="">
             </div>
             <div class="content">
                 <h3>Concert Decorations</h3>
-                <p>Italian cuisine is renowned for its diversity, flavors, and regional specialties. It is characterized by its emphasis on fresh, high-quality ingredients and simple preparation methods.</p>
-                <p>Some quintessential Italian dishes include:</p>
+                <p>Concert decorations transform venues into immersive environments, combining vibrant banners, dynamic lighting, and themed props to amplify the concert experience. From larger-than-life backdrops to interactive installations, every detail is curated to create a visually stunning and memorable atmosphere for attendees.</p>
+                <p>Some events that can include this type of decoration:</p>
                 <ul>
-                    <li>Spaghetti Carbonara</li>
-                    <li>Lasagna</li>
-                    <li>Risotto alla Milanese</li>
-                    <li>Bruschetta</li>
-                    <li>Tiramisu</li>
+                    <li>Concerts</li>
+                    <li>Birthdays</li>
                 </ul>
                 <a href="book.php" class="btn">Book Now</a>
             </div>
         </div>
 
-        <div class="box" id="chinease">
+        <div class="box" id="kids">
             <div class="image">
-                <img src="images/chinease.jpg" alt=""> 
+                <img src="images/kids.jpg" alt=""> 
             </div>
             <div class="content">
-                <h3>Chinese</h3>
-                <p>Chinese cuisine is one of the oldest and most diverse culinary traditions in the world, characterized by its rich flavors, varied cooking techniques, and use of fresh ingredients. With a history spanning thousands of years, Chinese cuisine has evolved over time, influenced by geography, climate, and cultural exchanges.</p>
-                <p>Some quintessential Chinese dishes include:</p>
+                <h3>Kids Decorations</h3>
+                <p>Kids decorations infuse spaces with whimsy and wonder, featuring colorful balloons, playful banners, and themed props to ignite imaginations. From themed table settings to interactive play zones, each element is designed to spark joy and create enchanting memories for young attendees.</p>
+                <p>Some events that can include this type of decoration:</p>
                 <ul>
-                    <li>Kung Pao Chicken</li>
-                    <li>Mapo Tofu</li>
-                    <li>Dim Sum</li>
-                    <li>Chow Mein</li>
-                    <li>General Tso's Chicken</li>
+                    <li>Birthdays</li>
+                    <li>Baby Shower</li>
                 </ul>
                 <a href="book.php" class="btn">Book Now</a>
             </div>
         </div>
 
-        <div class="box" id="indian">
+        <div class="box" id="white">
             <div class="image">
-                <img src="images/indian.jpg" alt=""> 
+                <img src="images/white.jpg" alt=""> 
             </div>
             <div class="content">
-                <h3>North Indian</h3>
-                <p>Indian cuisine is renowned for its bold flavors, vibrant colors, and rich variety of dishes. With its diverse regional specialties and culinary traditions dating back thousands of years, Indian cuisine offers a truly unique and tantalizing dining experience.</p>
-                <p>Some quintessential Indian dishes include:</p>
+                <h3>White Decorations</h3>
+                <p>White decorations evoke elegance and purity, employing pristine fabrics, delicate florals, and shimmering accents to create a timeless atmosphere. From ethereal drapery to glistening table settings, every detail bathed in white radiates sophistication and grace, transforming spaces into serene sanctuaries of beauty and tranquility.</p>
+                <p>Some events that can include this type of decoration:</p>
                 <ul>
-                    <li>Chicken Tikka Masala</li>
-                    <li>Kadhai Paneer</li>
-                    <li>Pani Puri (Golgappa)</li>
-                    <li>Paneer Tikka</li>
-                    <li>Biryani</li>
+                    <li>Birthdays</li>
+                    <li>Marriages</li>
+                    <li>Anniversary</li>
                 </ul>
                 <a href="book.php" class="btn">Book Now</a>
             </div>
         </div>
 
-        <div class="box" id="continental">
+        <div class="box" id="formal">
             <div class="image">
-                <img src="images/continental.jpg" alt=""> 
+                <img src="images/formal.jpg" alt=""> 
             </div>
             <div class="content">
-                <h3>Continental</h3>
-                <p>Continental cuisine refers to the food of European countries, characterized by its diversity, elegance, and sophistication. While the term "continental cuisine" encompasses a wide range of culinary traditions, it is often associated with French, Italian, Spanish, and German cooking styles.</p>
-                <p>Some quintessential Continental dishes include:</p>
+                <h3>Formal Decorations</h3>
+                <p>Formal decorations exude sophistication and refinement, featuring sleek lines, muted hues, and luxurious accents to set an elegant tone. From chic table settings to exquisite floral arrangements, each element is meticulously curated to create a polished and distinguished ambiance, perfect for upscale events and black-tie affairs.</p>
+                <p>Some events that can include this type of decoration:</p>
                 <ul>
-                    <li>Spaghetti Carbonara (Italian)</li>
-                    <li>Paella (Spanish)</li>
-                    <li>Schnitzel (German)</li>
-                    <li>Pasta Carbonara (Italian)</li>
-                    <li>Beef Wellington (United Kingdom)</li>
-                </ul>
-                <a href="book.php" class="btn">Book Now</a>
-            </div>
-        </div>
-
-        <div class="box" id="thai">
-            <div class="image">
-                <img src="images/thai.jpg" alt=""> 
-            </div>
-            <div class="content">
-                <h3>Thai</h3>
-                <p>Thai cuisine is renowned for its bold flavors, aromatic herbs, and vibrant colors. It is characterized by its balance of sweet, sour, salty, and spicy tastes, creating dishes that are both harmonious and exciting to the palate.</p>
-                <p>Some quintessential Thai dishes include:</p>
-                <ul>
-                    <li>Pad Thai</li>
-                    <li>Tom Yum Soup</li>
-                    <li>Green Curry</li>
-                    <li>Som Tum (Papaya Salad)</li>
-                    <li>Mango Sticky Rice</li>
-                </ul>
-                <a href="book.php" class="btn">Book Now</a>
-            </div>
-        </div>
-
-        <div class="box" id="mexican">
-            <div class="image">
-                <img src="images/mexican.jpg" alt=""> 
-            </div>
-            <div class="content">
-                <h3>Mexican</h3>
-                <p>Mexican cuisine is known for its bold flavors, vibrant colors, and rich cultural heritage. It is a fusion of indigenous Mesoamerican cooking with Spanish, Caribbean, and African influences, resulting in a diverse and flavorful culinary tradition.</p>
-                <p>Some quintessential Mexican dishes include:</p>
-                <ul>
-                    <li>Tacos (e.g., carne asada, al pastor)</li>
-                    <li>Enchiladas</li>
-                    <li>Guacamole</li>
-                    <li>Chiles Rellenos</li>
-                    <li>Mole Poblano</li>
-                </ul>
-                <a href="book.php" class="btn">Book Now</a>
-            </div>
-        </div>
-        <div class="box" id="american">
-            <div class="image">
-                <img src="images/american.jpg" alt=""> 
-            </div>
-            <div class="content">
-                <h3>American</h3>
-                <p>American cuisine is as diverse and varied as the country itself, reflecting its rich cultural heritage and regional influences. From hearty comfort foods to innovative culinary creations, American cuisine encompasses a wide range of flavors, ingredients, and cooking styles.</p>
-                <p>Some quintessential American dishes include:</p>
-                <ul>
-                    <li>Hamburger</li>
-                    <li>Barbecue Ribs</li>
-                    <li>Macaroni and Cheese</li>
-                    <li>Buffalo Wings</li>
-                    <li>Apple Pie</li>
-                </ul>
-                <a href="book.php" class="btn">Book Now</a>
-            </div>
-        </div>
-
-        <div class="box" id="french">
-            <div class="image">
-                <img src="images/french.jpg" alt=""> 
-            </div>
-            <div class="content">
-                <h3>French</h3>
-                <p>French cuisine is celebrated for its elegance, sophistication, and emphasis on high-quality ingredients and meticulous preparation. It is widely regarded as one of the finest culinary traditions in the world, with a rich history and cultural significance.</p>
-                <p>Some quintessential French dishes include:</p>
-                <ul>
-                    <li>Coq au Vin</li>
-                    <li>Beef Bourguignon</li>
-                    <li>Ratatouille</li>
-                    <li>Escargot</li>
-                    <li>Croissant</li>
+                    <li>Conferences</li>
                 </ul>
                 <a href="book.php" class="btn">Book Now</a>
             </div>
         </div>
     </div>
-
    </section>
 
     
@@ -273,33 +191,33 @@
         <div class="box-container">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="home.php"><i class="fas fa-angle-right"></i>home</a>
-                <a href="about.php"><i class="fas fa-angle-right"></i>about</a>
-                <a href="event.php"><i class="fas fa-angle-right"></i>events</a>
-                <a href="book.php"><i class="fas fa-angle-right"></i>book</a>
+                <a href="home.php"><i class="fa-solid fa-house"></i>home</a>
+                <a href="about.php"><i class="fa-solid fa-circle-info"></i>about</a>
+                <a href="event.php"><i class="fa-solid fa-calendar-days"></i>events</a>
+                <a href="book.php"><i class="fa-solid fa-book"></i>book</a>
             </div>
 
             <div class="box">
                 <h3>Extra Links</h3>
-                <a href="#"><i class="fas fa-angle-right"></i>Ask Questions</a>
-                <a href="#"><i class="fas fa-angle-right"></i>About Us</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Privacy Policy</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Terms of Use</a>
+                <a href="about.php#feedback"><i class="fas fa-angle-right"></i>Ask Questions</a>
+                <a href="about.php"><i class="fas fa-angle-right"></i>About Us</a>
+                <a href="https://www.freeprivacypolicy.com/live/dbf6ca34-85a7-4078-b29a-30fded17e305"><i class="fas fa-angle-right"></i>Privacy Policy</a>
+                <a href="https://www.termsfeed.com/live/46a7d886-92b1-417d-89fd-d7a69e65a8a1"><i class="fas fa-angle-right"></i>Terms of Use</a>
             </div>
 
             <div class="box">
                 <h3>Contact Information</h3>
                 <a href="#"><i class="fas fa-phone"></i>+91 123456789</a>
                 <a href="#"><i class="fas fa-phone"></i>+91 111222333</a>
-                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                <a href="#"><i class="fas fa-envelope"></i>eventmingle@gmail.com</a>
                 <a href="#"><i class="fas fa-map"></i>Mohali</a>
             </div>
 
             <div class="box">
                 <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i>Twiiter</a>
-                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i>Facebook</a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i>Twiiter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>instagram</a>
             </div>
 
         </div>

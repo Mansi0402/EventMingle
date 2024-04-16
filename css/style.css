@@ -27,6 +27,8 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    /* -webkit-user-drag: none;
+    user-drag:none; */
 }
 
 html::-webkit-scrollbar{
@@ -100,6 +102,20 @@ html::-webkit-slider-thumb{
 #accessibility-btn img {
     width: 60px;
     height: 60px;
+}
+
+.warning-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+    background-color: #ffcccc;
+    padding: 20px;
+    border: 1px solid #ff6666;
+    border-radius: 5px;
+    z-index: 9999;
+    display: none;
 }
 
 .btn{
@@ -464,6 +480,13 @@ section{
     width: 100%;
 }
 
+.about .map iframe{
+    border-radius: 2rem;
+    border: var(--black);
+    box-shadow: purple;
+    border-width: 5rem;
+}
+
 .about .content{
     flex: 1 1 41rem;
     text-align: center;
@@ -507,8 +530,51 @@ section{
     display: block;
 }
 
+
+.about .book-form{
+    padding: 2rem;
+    background: var(--light-bg);
+}
+
+.about .book-form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .book-form .flex .inputBox{
+    flex: 1 1 41rem;
+}
+
+.about .book-form .flex .inputBox input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.about .book-form span{
+    font-size: 1.5rem;
+}
+
+.about .book-form .btn{
+    margin-top: 2rem;
+}
+
+
 .reviews{
     background: var(--light-bg);
+}
+
+.reviews .header-review{
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--black);
+    
 }
 
 .reviews .slide{
@@ -734,6 +800,10 @@ section{
     color: var(--light-black);
 }
 
+.booking p{
+    font-size: 2rem;
+    text-align: center;
+}
 
 .booking .book-form{
     padding: 2rem;
@@ -784,6 +854,43 @@ section{
 .booking .book-form .btn{
     margin-top: 2rem;
 }
+
+.booking .book-form .flex .inputBox .time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 1rem; /* Adjust the gap between buttons as needed */
+}
+
+.booking .book-form .flex .inputBox .time-btn {
+    padding: 1rem 1.5rem; /* Adjust padding as needed */
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: uppercase;
+    background-color: var(--light-bg); /* Match background color with other components */
+    border: var(--border); /* Match border style with other components */
+    cursor: pointer;
+}
+
+.booking .book-form .flex .inputBox .time-btn:hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    color: var(--light-black); /* Change text color on hover */
+    border-color: var(--light-black);
+}
+
+.booking .book-form .flex .inputBox .time-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.booking .book-form .flex .inputBox .time-btn.selected {
+    background-color: var(--primary-color); /* Change background color */
+    color: var(--main-color); /* Change text color */
+    border-color: #8e44ad;
+    border-width: .2rem;
+    font-weight: bold;
+    
+}
+
 
 
 
@@ -887,9 +994,18 @@ section{
 
 @media (max-width:768px){
 
+    .about iframe{
+        height: 80%;
+        width: 90%;
+    }
+
     #menu-btn{
         display: inline-block;
         transition: .2s linear;
+    }
+    
+    .header .navbar .dropdown .dropbtn{
+        display: inline-block;
     }
 
     #menu-btn.fa-times{
@@ -912,11 +1028,14 @@ section{
     .header .navbar .dropdown{
         text-align: center;
         vertical-align: middle;
-        padding-left: 22rem;
     }
 
     .header .navbar .dropdown:hover .dropdown-content{
-        display: block;
+        display: inline-block;
+        z-index: inherit;
+    }
+
+    .header .navbar .submenu .submenu-content{
         z-index: inherit;
     }
 

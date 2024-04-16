@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="warning-message" id="select-warning">
+        Please refrain from selecting content.
+    </div>
+    <div class="warning-message" id="copy-warning">
+        Copying content is not allowed.
+    </div>
     <button id="accessibility-btn" aria-label="Accessibility Settings">
         <img src="images/1.png" alt="Accessibility Icon">
     </button>
@@ -45,12 +51,13 @@
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="">Decorations<i class="fa fa-caret-right"></i></a>
+                        <a href="decorations.php">Decorations<i class="fa fa-caret-right"></i></a>
                         <div class="submenu-content">
-                            <a href="">Floral Decorations</a>
-                            <a href="">Kids Decorations</a>
-                            <a href="">White Decorations</a>
-                            <a href="">Concert Decorations</a>
+                            <a href="decorations.php#floral">Floral Decorations</a>
+                            <a href="decorations.php#concert">Concert Decorations</a>
+                            <a href="decorations.php#kids">Kids Decorations</a>
+                            <a href="decorations.php#white">White Decorations</a>
+                            <a href="decorations.php#formal">Formal Decorations</a>
                         </div>
                     </div>
                 </div>
@@ -68,15 +75,17 @@
    <!-- booking section -->
    <section class="booking">
     <h1 class="heading-title">Book your Event!</h1>
+    <div>
+        <p>Required fields are in red and marked with an *</p>
+    </div>
     <form action="book_form.php" method="post" class="book-form" name="bookForm" onsubmit="return validateForm()">
-
         <div class="flex">
             <div class="inputBox">
-                <span>Name: </span>
+                <span style="color:red">Name: * </span>
                 <input type="text" placeholder= "Enter your name" name = "name">
             </div>
             <div class="inputBox">
-                <span>Phone number: </span>
+                <span style="color:red">Phone number: *</span>
                 <input type="text" placeholder= "Enter your number" name = "phone">
             </div>
             <div class="inputBox">
@@ -91,15 +100,28 @@
                     <option value="Anniversary">Anniversary</option>
                     <option value="Baby Shower">Baby Shower</option>
                     <option value="Conference">Conference</option>
+                    <option value="Conference">Concert</option>
                 </select>
             </div>
             <div class="inputBox">
-                <span>Date: </span>
+                <span style="color:red">Date: </span>
                 <input type="date" name = "date">
             </div>
             <div class="inputBox">
-                <span>Time: </span>
-                <input type="time" name = "time">
+                <span style="color:red">Time: </span>
+                <div class="time-buttons">
+                    <button type="button" class="time-btn" value="10:00:00">10:00</button>
+                    <button type="button" class="time-btn" value="11:00:00">11:00</button>
+                    <button type="button" class="time-btn" value="15:00:00">15:00</button>
+                    <button type="button" class="time-btn" value="16:00:00">16:00</button>
+                    <button type="button" class="time-btn" value="17:00:00">17:00</button>
+                    <button type="button" class="time-btn" value="18:00:00">18:00</button>
+                    <button type="button" class="time-btn" value="19:00:00">19:00</button>
+                    <button type="button" class="time-btn" value="20:00:00">20:00</button>
+                    <button type="button" class="time-btn" value="21:00:00">21:00</button>
+                    <button type="button" class="time-btn" value="22:00:00">22:00</button>
+                </div>
+                <input type="hidden" id="selected-time" name="time" value="">
             </div>
             <div class="inputBox">
                 <span>Number of Guests : </span>
@@ -155,33 +177,33 @@
         <div class="box-container">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="home.php"><i class="fas fa-angle-right"></i>home</a>
-                <a href="about.php"><i class="fas fa-angle-right"></i>about</a>
-                <a href="event.php"><i class="fas fa-angle-right"></i>events</a>
-                <a href="book.php"><i class="fas fa-angle-right"></i>book</a>
+                <a href="home.php"><i class="fa-solid fa-house"></i>home</a>
+                <a href="about.php"><i class="fa-solid fa-circle-info"></i>about</a>
+                <a href="event.php"><i class="fa-solid fa-calendar-days"></i>events</a>
+                <a href="book.php"><i class="fa-solid fa-book"></i>book</a>
             </div>
 
             <div class="box">
                 <h3>Extra Links</h3>
-                <a href="#"><i class="fas fa-angle-right"></i>Ask Questions</a>
-                <a href="#"><i class="fas fa-angle-right"></i>About Us</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Privacy Policy</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Terms of Use</a>
+                <a href="about.php#feedback"><i class="fas fa-angle-right"></i>Ask Questions</a>
+                <a href="about.php"><i class="fas fa-angle-right"></i>About Us</a>
+                <a href="https://www.freeprivacypolicy.com/live/dbf6ca34-85a7-4078-b29a-30fded17e305"><i class="fas fa-angle-right"></i>Privacy Policy</a>
+                <a href="https://www.termsfeed.com/live/46a7d886-92b1-417d-89fd-d7a69e65a8a1"><i class="fas fa-angle-right"></i>Terms of Use</a>
             </div>
 
             <div class="box">
                 <h3>Contact Information</h3>
                 <a href="#"><i class="fas fa-phone"></i>+91 123456789</a>
                 <a href="#"><i class="fas fa-phone"></i>+91 111222333</a>
-                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                <a href="#"><i class="fas fa-envelope"></i>eventmingle@gmail.com</a>
                 <a href="#"><i class="fas fa-map"></i>Mohali</a>
             </div>
 
             <div class="box">
                 <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i>Twiiter</a>
-                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i>Facebook</a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i>Twiiter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>instagram</a>
             </div>
 
         </div>

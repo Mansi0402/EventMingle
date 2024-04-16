@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="warning-message" id="select-warning">
+        Please refrain from selecting content.
+    </div>
+    <div class="warning-message" id="copy-warning">
+        Copying content is not allowed.
+    </div>
     <button id="accessibility-btn" aria-label="Accessibility Settings">
         <img src="images/1.png" alt="Accessibility Icon">
     </button>
@@ -45,12 +51,13 @@
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="">Decorations<i class="fa fa-caret-right"></i></a>
+                        <a href="decorations.php">Decorations<i class="fa fa-caret-right"></i></a>
                         <div class="submenu-content">
-                            <a href="">Floral Decorations</a>
-                            <a href="">Kids Decorations</a>
-                            <a href="">White Decorations</a>
-                            <a href="">Concert Decorations</a>
+                            <a href="decorations.php#floral">Floral Decorations</a>
+                            <a href="decorations.php#concert">Concert Decorations</a>
+                            <a href="decorations.php#kids">Kids Decorations</a>
+                            <a href="decorations.php#white">White Decorations</a>
+                            <a href="decorations.php#formal">Formal Decorations</a>
                         </div>
                     </div>
                 </div>
@@ -92,9 +99,55 @@
     </div>
    </section>
 
+   <section class="about">
+    <div class="image">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.20625298675!2d76.57279697537447!3d30.76879017456677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb140bd63e07%3A0x68591e334d17a988!2sChandigarh%20University!5e0!3m2!1sen!2sin!4v1712295338262!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="content" id = "feedback">
+        <h3>Contact Us!</h3>
+        <h3>We would love to hear from you!</h3>
+        <form action="query_form.php" method="post" class="book-form" name="feedbackForm" onsubmit="return validateForm()">
+        <div class="flex">
+            <div class="inputBox">
+                <span >Name: </span>
+                <input type="text" placeholder= "Enter your name" name = "name">
+            </div>
+            <div class="inputBox">
+                <span>Phone number: </span>
+                <input type="text" placeholder= "Enter your number" name = "phone">
+            </div>
+            <div class="inputBox">
+                <span>Queries : </span>
+                <input type="text" placeholder= "Enter your queries" name = "query">
+            </div>
+        </div>
+            <input type="submit" value="submit" class="btn" name = "send">
+        </form>
+        <div class="icons-container">
+            <div class="icons">
+                <i class="fas fa-phone"></i>
+                <span>+91-1122334455</span>
+            </div>
+            <div class="icons">
+                <i class="fas fa-envelope"></i>
+                <span>eventmingle@gmail.com</span>
+            </div>
+            <div class="icons">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>973 Eden Plaza, West Russellmouth, FL 62369</span>
+            </div>
+        </div>
+    </div>
+   </section>
+   
+
    <!-- about section ends -->
    <!-- review section -->
    <section class="reviews">
+    <!-- <div class = "header-review">
+        <p>Top Reviews</p>
+    </div> -->
     <div class="swiper reviews-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slider slide">
@@ -113,7 +166,6 @@
 
             <div class="swiper-slider slide">
                 <div class="stars">
-                    <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -170,6 +222,8 @@
     </div>
    </section>
 
+   
+
 
     
 
@@ -202,33 +256,33 @@
         <div class="box-container">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="home.php"><i class="fas fa-angle-right"></i>home</a>
-                <a href="about.php"><i class="fas fa-angle-right"></i>about</a>
-                <a href="event.php"><i class="fas fa-angle-right"></i>events</a>
-                <a href="book.php"><i class="fas fa-angle-right"></i>book</a>
+                <a href="home.php"><i class="fa-solid fa-house"></i>home</a>
+                <a href="about.php"><i class="fa-solid fa-circle-info"></i>about</a>
+                <a href="event.php"><i class="fa-solid fa-calendar-days"></i>events</a>
+                <a href="book.php"><i class="fa-solid fa-book"></i>book</a>
             </div>
 
             <div class="box">
                 <h3>Extra Links</h3>
-                <a href="#"><i class="fas fa-angle-right"></i>Ask Questions</a>
-                <a href="#"><i class="fas fa-angle-right"></i>About Us</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Privacy Policy</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Terms of Use</a>
+                <a href="about.php#feedback"><i class="fas fa-angle-right"></i>Ask Questions</a>
+                <a href="about.php"><i class="fas fa-angle-right"></i>About Us</a>
+                <a href="https://www.freeprivacypolicy.com/live/dbf6ca34-85a7-4078-b29a-30fded17e305"><i class="fas fa-angle-right"></i>Privacy Policy</a>
+                <a href="https://www.termsfeed.com/live/46a7d886-92b1-417d-89fd-d7a69e65a8a1"><i class="fas fa-angle-right"></i>Terms of Use</a>
             </div>
 
             <div class="box">
                 <h3>Contact Information</h3>
                 <a href="#"><i class="fas fa-phone"></i>+91 123456789</a>
                 <a href="#"><i class="fas fa-phone"></i>+91 111222333</a>
-                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                <a href="#"><i class="fas fa-envelope"></i>eventmingle@gmail.com</a>
                 <a href="#"><i class="fas fa-map"></i>Mohali</a>
             </div>
 
             <div class="box">
                 <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i>Twiiter</a>
-                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i>Facebook</a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i>Twiiter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>instagram</a>
             </div>
 
         </div>

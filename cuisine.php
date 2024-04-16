@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="warning-message" id="select-warning">
+        Please refrain from selecting content.
+    </div>
+    <div class="warning-message" id="copy-warning">
+        Copying content is not allowed.
+    </div>
     <button id="accessibility-btn" aria-label="Accessibility Settings">
         <img src="images/1.png" alt="Accessibility Icon">
     </button>
@@ -47,10 +53,11 @@
                     <div class="submenu">
                         <a href="decorations.php">Decorations<i class="fa fa-caret-right"></i></a>
                         <div class="submenu-content">
-                            <a href="decorations.php">Floral Decorations</a>
-                            <a href="">Kids Decorations</a>
-                            <a href="">White Decorations</a>
-                            <a href="">Concert Decorations</a>
+                            <a href="decorations.php#floral">Floral Decorations</a>
+                            <a href="decorations.php#concert">Concert Decorations</a>
+                            <a href="decorations.php#kids">Kids Decorations</a>
+                            <a href="decorations.php#white">White Decorations</a>
+                            <a href="decorations.php#formal">Formal Decorations</a>
                         </div>
                     </div>
                 </div>
@@ -273,33 +280,33 @@
         <div class="box-container">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="home.php"><i class="fas fa-angle-right"></i>home</a>
-                <a href="about.php"><i class="fas fa-angle-right"></i>about</a>
-                <a href="event.php"><i class="fas fa-angle-right"></i>events</a>
-                <a href="book.php"><i class="fas fa-angle-right"></i>book</a>
+                <a href="home.php"><i class="fa-solid fa-house"></i>home</a>
+                <a href="about.php"><i class="fa-solid fa-circle-info"></i>about</a>
+                <a href="event.php"><i class="fa-solid fa-calendar-days"></i>events</a>
+                <a href="book.php"><i class="fa-solid fa-book"></i>book</a>
             </div>
 
             <div class="box">
                 <h3>Extra Links</h3>
-                <a href="#"><i class="fas fa-angle-right"></i>Ask Questions</a>
-                <a href="#"><i class="fas fa-angle-right"></i>About Us</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Privacy Policy</a>
-                <a href="#"><i class="fas fa-angle-right"></i>Terms of Use</a>
+                <a href="about.php#feedback"><i class="fas fa-angle-right"></i>Ask Questions</a>
+                <a href="about.php"><i class="fas fa-angle-right"></i>About Us</a>
+                <a href="https://www.freeprivacypolicy.com/live/dbf6ca34-85a7-4078-b29a-30fded17e305"><i class="fas fa-angle-right"></i>Privacy Policy</a>
+                <a href="https://www.termsfeed.com/live/46a7d886-92b1-417d-89fd-d7a69e65a8a1"><i class="fas fa-angle-right"></i>Terms of Use</a>
             </div>
 
             <div class="box">
                 <h3>Contact Information</h3>
                 <a href="#"><i class="fas fa-phone"></i>+91 123456789</a>
                 <a href="#"><i class="fas fa-phone"></i>+91 111222333</a>
-                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                <a href="#"><i class="fas fa-envelope"></i>eventmingle@gmail.com</a>
                 <a href="#"><i class="fas fa-map"></i>Mohali</a>
             </div>
 
             <div class="box">
                 <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i>Twiiter</a>
-                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i>Facebook</a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i>Twiiter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>instagram</a>
             </div>
 
         </div>
