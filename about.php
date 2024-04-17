@@ -148,9 +148,9 @@
     <!-- <div class = "header-review">
         <p>Top Reviews</p>
     </div> -->
-    <div class="swiper reviews-slider">
+    <div class="swiper-container reviews-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slider slide">
+            <div class="swiper-slide slide">
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -164,7 +164,7 @@
                 <img src="images/pic1.png" alt="">
             </div>
 
-            <div class="swiper-slider slide">
+            <div class="swiper-slide slide">
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -177,21 +177,7 @@
                 <img src="images/pic1.png" alt="">
             </div>
 
-            <div class="swiper-slider slide">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum enim odit perferendis esse sunt provident error quae dicta quas. Sapiente veritatis id, eveniet non accusamus quo quae dolor ab, cumque porro tenetur, vitae corporis sequi obcaecati ut perferendis? Nulla, deleniti.</p>
-                <h3>Kunal Gaurav</h3>
-                <span>GATE aspirant</span>
-                <img src="images/pic1.png" alt="">
-            </div>
-
-            <div class="swiper-slider slide">
+            <div class="swiper-slide slide">
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -205,7 +191,21 @@
                 <img src="images/pic1.png" alt="">
             </div>
 
-            <div class="swiper-slider slide">
+            <div class="swiper-slide slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum enim odit perferendis esse sunt provident error quae dicta quas. Sapiente veritatis id, eveniet non accusamus quo quae dolor ab, cumque porro tenetur, vitae corporis sequi obcaecati ut perferendis? Nulla, deleniti.</p>
+                <h3>Kunal Gaurav</h3>
+                <span>GATE aspirant</span>
+                <img src="images/pic1.png" alt="">
+            </div>
+
+            <div class="swiper-slide slide">
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -219,6 +219,7 @@
                 <img src="images/pic1.png" alt="">
             </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
    </section>
 

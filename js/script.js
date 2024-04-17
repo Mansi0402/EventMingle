@@ -19,6 +19,51 @@ var swiper = new Swiper(".home-slider",{
     },
 });
 
+// var swiper = new Swiper(".reviews-slider", {
+//     loop:true,
+//     // spaceBetween:20,
+//     // autoHeight:true,
+//     grabCursor:true,
+//     breakpoints: {
+//         640: {
+//             slidesPerView:4,
+//             spaceBetween : 40,
+//         },
+//         768: {
+//             slidesPerView: 5,
+//             spaceBetween : 50,
+//         },
+//         1024: {
+//             slidesPerView: 6,
+//             spaceBetween : 60
+//         },
+//     },
+// });
+
+var swiper = new Swiper(".reviews-slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-slider",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+    },
+});
+
+
 
 
 
@@ -189,53 +234,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const selectWarning = document.getElementById('select-warning');
-    const copyWarning = document.getElementById('copy-warning');
-    const dragWarning = document.getElementById('drop-warning');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const selectWarning = document.getElementById('select-warning');
+//     const copyWarning = document.getElementById('copy-warning');
+//     const dragWarning = document.getElementById('drop-warning');
 
-    function showSelectWarning() {
-        selectWarning.style.display = 'block';
-        setTimeout(function () {
-            selectWarning.style.display = 'none';
-        }, 3000);
-    }
+//     function showSelectWarning() {
+//         selectWarning.style.display = 'block';
+//         setTimeout(function () {
+//             selectWarning.style.display = 'none';
+//         }, 3000);
+//     }
 
-    function showDragWarning() {
-        dragWarning.style.display = 'block';
-        setTimeout(function () {
-            dragWarning.style.display = 'none';
-        }, 3000);
-    }
+//     function showDragWarning() {
+//         dragWarning.style.display = 'block';
+//         setTimeout(function () {
+//             dragWarning.style.display = 'none';
+//         }, 3000);
+//     }
 
-    function showCopyWarning() {
-        copyWarning.style.display = 'block';
-        setTimeout(function () {
-            copyWarning.style.display = 'none';
-        }, 2000); 
-    }
+//     function showCopyWarning() {
+//         copyWarning.style.display = 'block';
+//         setTimeout(function () {
+//             copyWarning.style.display = 'none';
+//         }, 2000); 
+//     }
 
-    document.addEventListener('mousedown', function (event) {
-        if (event.button === 2) { 
-            document.addEventListener('contextmenu', showSelectWarningOnce);
-        }
-    });
+//     document.addEventListener('mousedown', function (event) {
+//         if (event.button === 2) { 
+//             document.addEventListener('contextmenu', showSelectWarningOnce);
+//         }
+//     });
 
-    function showSelectWarningOnce(event) {
-        showSelectWarning();
-        event.preventDefault();
-        document.removeEventListener('contextmenu', showSelectWarningOnce);
-    }
+//     function showSelectWarningOnce(event) {
+//         showSelectWarning();
+//         event.preventDefault();
+//         document.removeEventListener('contextmenu', showSelectWarningOnce);
+//     }
 
-    document.addEventListener('copy', function (event) {
-        event.preventDefault(); 
-        showCopyWarning();
-    });
+//     document.addEventListener('copy', function (event) {
+//         event.preventDefault(); 
+//         showCopyWarning();
+//     });
 
-    document.addEventListener('dragover', ev=>{
-        ev.dataTransfer.dropEffect = "none";
-        showDragWarning();
-        ev.preventDefault();
-    });
-});
+//     document.addEventListener('dragover', ev=>{
+//         ev.dataTransfer.dropEffect = "none";
+//         showDragWarning();
+//         ev.preventDefault();
+//     });
+// });
 
